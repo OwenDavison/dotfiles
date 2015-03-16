@@ -2,7 +2,6 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Update configs
 sudo sed -i "s/ca.archive.ubuntu.com/mirror.its.dal.ca/g" /etc/apt/sources.list #Switch to dal sources mirror
-sudo sed -i "s/enabled=1/enabled=0/g" /etc/default/apport #Disable apport
 
 # Remove things I don't need
 sudo apt-get remove -y \
@@ -87,7 +86,14 @@ xfconf-query \
   --set "tile_right_key"
 
 # Disable screen locking
-sudo sed -i "s/^Exec=.*$/Exec=/g" ~/.config/autostart/light-locker.desktop #Disable light-locker
+sed -i "s/^Exec=.*$/Exec=/g" ~/.config/autostart/light-locker.desktop #Disable light-locker
+
+# Disable apport
+sudo sed -i "s/enabled=1/enabled=0/g" /etc/default/apport
+
+# Disable swap
+sudo sysctl -w vp.swappiness=0
+sudo echo "vm.swappiness = 0" >> /etc/sysctl
 
 printf 'TODO: Install guest additions\n'
 
