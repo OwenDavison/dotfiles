@@ -1,0 +1,8 @@
+[user]
+	email = odavison@cs.dal.ca
+	name = Owen Davison
+[push]
+	default = simple
+[core]
+	excludesfile = /home/odavison/.gitignore_global
+	editor = vim

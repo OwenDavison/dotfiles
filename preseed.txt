@@ -1,0 +1,1 @@
+keyboard-configuration	keyboard-configuration/variantcode	string	colemak
