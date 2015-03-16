@@ -86,5 +86,8 @@ xfconf-query \
   --type string \
   --set "tile_right_key"
 
+# Disable screen locking
+sudo sed -i "s/^Exec=.*$/Exec=/g" ~/.config/autostart/light-locker.desktop #Disable light-locker
+
 printf 'TODO: Install guest additions\n'
 
