@@ -22,29 +22,28 @@ sudo apt-get remove -y \
 # Clean up
 sudo apt-get autoremove -y
 
-# Update packages
-sudo apt-get update -y
-sudo apt-get dist-upgrade -y
-
 # Install chrome PPA
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
 sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list'
 
+# Update packages
+sudo apt-get update -y
+sudo apt-get dist-upgrade -y
+
 # Install packages
 sudo apt-get install -y \
-build-essential \
-python-dev \
-cmake \
-texlive \
-latexmk \
-graphviz \
-vim \
-gnome-system-monitor \
-openssh-server \
-ack-grep \
-git \
-tree \
-google-chrome-stable
+  build-essential \
+  python-dev \
+  cmake \
+  texlive \
+  latexmk \
+  graphviz \
+  vim \
+  gnome-system-monitor \
+  openssh-server \
+  ack-grep \
+  tree \
+  google-chrome-stable
 
 # Speed up user interface
 cat <<EOT > ~/.gtkrc-2.0
@@ -92,7 +91,7 @@ sudo sed -i "s/enabled=1/enabled=0/g" /etc/default/apport
 
 # Disable swap
 sudo sysctl -w vm.swappiness=0
-sudo echo "vm.swappiness = 0" >> /etc/sysctl
+sudo echo "vm.swappiness = 0" | sudo tee -a /etc/sysctl.conf >> /dev/null
 
 printf 'TODO: Install guest additions\n'
 

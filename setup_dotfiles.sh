@@ -5,7 +5,7 @@ DOTFILE_DIR=$1
 ln -s -f $DOTFILE_DIR/.gitconfig ~/
 ln -s -f $DOTFILE_DIR/.gitignore_global ~/
 
-mkdir -p ~/.ssh
+mkdir -p ~/.ssh/tmp
 ln -s -f $DOTFILE_DIR/.ssh/config ~/.ssh/config
 
 mkdir -p ~/.vim/ftplugin
