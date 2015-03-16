@@ -43,6 +43,8 @@ sudo apt-get install -y \
   openssh-server \
   ack-grep \
   tree \
+  python3-pip \
+  baobab \
   google-chrome-stable
 
 # Speed up user interface
