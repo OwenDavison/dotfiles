@@ -2,10 +2,17 @@
 
 DOTFILE_DIR=$1
 
-rm -rf ~/.vim
-for DOTFILE in .*; do
-	ln -f -s $DOTFILE_DIR/$DOTFILE ~/
-done
+ln -s -f $DOTFILE_DIR/.gitconfig ~/
+ln -s -f $DOTFILE_DIR/.gitignore_global ~/
+
+mkdir -p ~/.ssh
+ln -s -f $DOTFILE_DIR/.ssh/config ~/.ssh/config
+
+mkdir -p ~/.vim/ftplugin
+ln -s -f $DOTFILE_DIR/.vim/ftplugin/* ~/.vim/ftplugin
+ln -s -f $DOTFILE_DIR/.vimrc ~/
+
+ln -s -f $DOTFILE_DIR/.ycm_extra_conf.py ~/
 
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
