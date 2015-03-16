@@ -5,19 +5,19 @@ sudo sed -i "s/ca.archive.ubuntu.com/mirror.its.dal.ca/g" /etc/apt/sources.list 
 
 # Remove things I don't need
 sudo apt-get remove -y \
-software-center \
-firefox \
-thunderbird \
-gmusicbrowser \
-abiword \
-gnumeric \
-pidgin \
-gimp \
-transmission-gtk \
-transmission-common \
-parole \
-xfburn \
-vim-tiny
+  software-center \
+  firefox \
+  thunderbird \
+  gmusicbrowser \
+  abiword \
+  gnumeric \
+  pidgin \
+  gimp \
+  transmission-gtk \
+  transmission-common \
+  parole \
+  xfburn \
+  vim-tiny
 
 # Clean up
 sudo apt-get autoremove -y
@@ -32,7 +32,6 @@ sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc
 
 # Install packages
 sudo apt-get install -y \
-guake \
 build-essential \
 python-dev \
 cmake \
@@ -48,7 +47,7 @@ tree \
 google-chrome-stable
 
 # Speed up user interface
-cat <<EOT >> ~/.gtkrc-2.0
+cat <<EOT > ~/.gtkrc-2.0
 gtk-menu-popup-delay = 0 
 gtk-menu-popdown-delay = 0 
 gtk-menu-bar-popup-delay = 0 
@@ -92,7 +91,7 @@ sed -i "s/^Exec=.*$/Exec=/g" ~/.config/autostart/light-locker.desktop #Disable l
 sudo sed -i "s/enabled=1/enabled=0/g" /etc/default/apport
 
 # Disable swap
-sudo sysctl -w vp.swappiness=0
+sudo sysctl -w vm.swappiness=0
 sudo echo "vm.swappiness = 0" >> /etc/sysctl
 
 printf 'TODO: Install guest additions\n'
