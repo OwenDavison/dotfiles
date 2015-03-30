@@ -26,6 +26,10 @@ sudo apt-get autoremove -y
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
 sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list'
 
+# Install Oracle JDK PPA
+sudo add-apt-repository ppa:webupd8team/java
+echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
+
 # Update packages
 sudo apt-get update -y
 sudo apt-get dist-upgrade -y
@@ -37,6 +41,8 @@ sudo apt-get install -y \
   cmake \
   texlive \
   latexmk \
+  texlive-latex-extra \
+  texlive-fonts-recommended \
   graphviz \
   vim \
   gnome-system-monitor \
@@ -44,8 +50,16 @@ sudo apt-get install -y \
   ack-grep \
   tree \
   python3-pip \
+  python3-numpy \
+  python3-scipy \
+  python3-matplotlib \
   baobab \
+  oracle-java8-installer \
   google-chrome-stable
+
+sudo pip3 install \
+  ipython \
+  cogapp
 
 # Speed up user interface
 cat <<EOT > ~/.gtkrc-2.0
