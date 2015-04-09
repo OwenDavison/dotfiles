@@ -29,6 +29,7 @@ sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc
 # Install Oracle JDK PPA
 sudo add-apt-repository ppa:webupd8team/java
 echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
+echo "export JAVA_CMD=/usr/bin/java" | sudo tee /etc/profile.d/java.sh > /dev/null #Add environment variable for JRE
 
 # Update packages
 sudo apt-get update -y
@@ -39,10 +40,17 @@ sudo apt-get install -y \
   build-essential \
   python-dev \
   cmake \
+  cmake-curses-gui \
+  cmake-qt-gui \
+  libboost1.55-all-dev \
   texlive \
   latexmk \
   texlive-latex-extra \
   texlive-fonts-recommended \
+  texlive-xetex \
+  texlive-science \
+  texlive-bibtex-extra \
+  xpdf \
   graphviz \
   vim \
   gnome-system-monitor \
