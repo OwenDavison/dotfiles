@@ -63,7 +63,9 @@ sudo apt-get install -y \
   python3-matplotlib \
   baobab \
   oracle-java8-installer \
-  google-chrome-stable
+  google-chrome-stable \
+  zsh \
+  curl
 
 sudo pip3 install \
   ipython \
