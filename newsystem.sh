@@ -116,8 +116,11 @@ sed -i "s/^Exec=.*$/Exec=/g" ~/.config/autostart/light-locker.desktop #Disable l
 sudo sed -i "s/enabled=1/enabled=0/g" /etc/default/apport
 
 # Disable swap
-sudo sysctl -w vm.swappiness=0
-sudo echo "vm.swappiness = 0" | sudo tee -a /etc/sysctl.conf >> /dev/null
+#sudo sysctl -w vm.swappiness=0
+#sudo echo "vm.swappiness = 0" | sudo tee -a /etc/sysctl.conf >> /dev/null
+
+# Set capslock to be a ctrl key
+setxkbmap -option ctrl:nocaps
 
 printf 'TODO: Install guest additions\n'
 

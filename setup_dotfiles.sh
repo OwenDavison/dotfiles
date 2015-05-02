@@ -1,12 +1,17 @@
 #!/bin/bash
 
-DOTFILE_DIR=$1
+DOTFILE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 ln -s -f $DOTFILE_DIR/.gitconfig ~/
 ln -s -f $DOTFILE_DIR/.gitignore_global ~/
 
 mkdir -p ~/.ssh/tmp
 ln -s -f $DOTFILE_DIR/.ssh/config ~/.ssh/config
+
+ln -s -f $DOTFILE_DIR/.terminalrc ~/.config/xfce4/terminal/terminalrc
+ln -s -f $DOTFILE_DIR/.tmux.conf ~/
+
+ln -s -f $DOTFILE_DIR/.zshrc ~/
 
 mkdir -p ~/.vim/ftplugin
 ln -s -f $DOTFILE_DIR/.vim/ftplugin/* ~/.vim/ftplugin
