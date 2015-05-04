@@ -1,5 +1,5 @@
 setlocal spell	" Enable spell-checking
-setlocal wrap   " Enable visual line wrapping
+setlocal wrap linebreak nolist  " Enable visual line wrapping
 setlocal tabstop=2
 setlocal shiftwidth=2
 setlocal expandtab
