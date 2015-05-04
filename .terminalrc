@@ -1,8 +1,7 @@
-# Originally from https://github.com/sgerrand/xfce4-terminal-colors-solarized.git
 [Configuration]
-ColorCursor=#0f0f49499999
-ColorForeground=#838394949696
-ColorBackground=#00002b2b3636
+ColorCursor=#93a1a1
+ColorForeground=#839496
+ColorBackground=#002b36
 ColorPalette1=#070736364242
 ColorPalette2=#dcdc32322f2f
 ColorPalette3=#858599990000
@@ -38,4 +37,8 @@ MiscTabCloseMiddleClick=TRUE
 MiscTabPosition=GTK_POS_TOP
 MiscHighlightUrls=TRUE
 MiscScrollAlternateScreen=TRUE
+ColorBold=#93a1a1
+ColorBoldUseDefault=FALSE
+ColorPalette=#073642;#dc322f;#859900;#b58900;#268bd2;#d33682;#2aa198;#eee8d5;#002b36;#cb4b16;#586e75;#657b83;#839496;#6c71c4;#93a1a1;#fdf6e3
+TabActivityColor=#dc322f
 
