@@ -25,7 +25,6 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
-Plugin 'LaTeX-Box-Team/LaTeX-Box'
 
 "" YCM Config
 let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
