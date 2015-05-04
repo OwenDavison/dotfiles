@@ -8,16 +8,15 @@ ln -s -f $DOTFILE_DIR/.gitignore_global ~/
 mkdir -p ~/.ssh/tmp
 ln -s -f $DOTFILE_DIR/.ssh/config ~/.ssh/config
 
-ln -s -f $DOTFILE_DIR/.terminalrc ~/.config/xfce4/terminal/terminalrc
-ln -s -f $DOTFILE_DIR/.tmux.conf ~/
-
-ln -s -f $DOTFILE_DIR/.zshrc ~/
-
 # Powerline
 git submodule init
 git submodule update
 $DOTFILE_DIR/submodules/fonts/install.sh
 fc-cache -vf ~/.fonts/
+
+ln -s -f $DOTFILE_DIR/.terminalrc ~/.config/xfce4/terminal/terminalrc
+ln -s -f $DOTFILE_DIR/.tmux.conf ~/
+ln -s -f $DOTFILE_DIR/.zshrc ~/
 
 mkdir -p ~/.vim/ftplugin
 ln -s -f $DOTFILE_DIR/.vim/ftplugin/* ~/.vim/ftplugin

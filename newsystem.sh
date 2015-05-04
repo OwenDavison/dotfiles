@@ -66,7 +66,8 @@ sudo apt-get install -y \
   oracle-java8-installer \
   google-chrome-stable \
   zsh \
-  curl
+  curl \
+  tmux
 
 sudo pip3 install \
   ipython \
