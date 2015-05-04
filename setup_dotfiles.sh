@@ -18,6 +18,7 @@ ln -s -f $DOTFILE_DIR/.terminalrc ~/.config/xfce4/terminal/terminalrc
 ln -s -f $DOTFILE_DIR/.tmux.conf ~/
 ln -s -f $DOTFILE_DIR/.zshrc ~/
 ln -s -f $DOTFILE_DIR/.xsession ~/
+ln -s -f $DOTFILE_DIR/.latexmkrc ~/
 
 mkdir -p ~/.vim/ftplugin
 ln -s -f $DOTFILE_DIR/.vim/ftplugin/* ~/.vim/ftplugin
