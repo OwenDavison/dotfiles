@@ -17,6 +17,7 @@ fc-cache -vf ~/.fonts/
 ln -s -f $DOTFILE_DIR/.terminalrc ~/.config/xfce4/terminal/terminalrc
 ln -s -f $DOTFILE_DIR/.tmux.conf ~/
 ln -s -f $DOTFILE_DIR/.zshrc ~/
+ln -s -f $DOTFILE_DIR/.xsession ~/
 
 mkdir -p ~/.vim/ftplugin
 ln -s -f $DOTFILE_DIR/.vim/ftplugin/* ~/.vim/ftplugin
