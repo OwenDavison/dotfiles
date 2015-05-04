@@ -92,3 +92,4 @@ export TERM=screen-256color
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias tmux="tmux -2" #force 256 color mode
