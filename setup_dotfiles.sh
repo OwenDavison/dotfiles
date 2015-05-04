@@ -13,6 +13,12 @@ ln -s -f $DOTFILE_DIR/.tmux.conf ~/
 
 ln -s -f $DOTFILE_DIR/.zshrc ~/
 
+# Powerline
+git submodule init
+git submodule update
+$DOTFILE_DIR/submodules/fonts/install.sh
+fc-cache -vf ~/.fonts/
+
 mkdir -p ~/.vim/ftplugin
 ln -s -f $DOTFILE_DIR/.vim/ftplugin/* ~/.vim/ftplugin
 ln -s -f $DOTFILE_DIR/.vimrc ~/

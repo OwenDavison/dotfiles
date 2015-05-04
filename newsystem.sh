@@ -57,6 +57,7 @@ sudo apt-get install -y \
   openssh-server \
   ack-grep \
   tree \
+  python-pip \
   python3-pip \
   python3-numpy \
   python3-scipy \
@@ -70,6 +71,8 @@ sudo apt-get install -y \
 sudo pip3 install \
   ipython \
   cogapp
+
+sudo pip install powerline-status
 
 # Speed up user interface
 cat <<EOT > ~/.gtkrc-2.0
