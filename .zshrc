@@ -1,3 +1,18 @@
+source ~/dotfiles/submodules/antigen/antigen.zsh
+
+antigen use oh-my-zsh
+
+# Antigen bundles
+antigen bundle git
+antigen bundle pip
+antigen bundle command-not-found
+antigen bundle git-flow
+
+# Syntax highlighting
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+antigen apply
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -6,6 +21,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="agnoster"
+DEFAULT_USER="odavison"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
