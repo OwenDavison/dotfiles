@@ -50,6 +50,7 @@ sudo apt-get install -y \
   texlive-xetex \
   texlive-science \
   texlive-bibtex-extra \
+  biber \
   xpdf \
   graphviz \
   vim \
