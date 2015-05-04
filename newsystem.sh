@@ -67,7 +67,9 @@ sudo apt-get install -y \
   google-chrome-stable \
   zsh \
   curl \
-  tmux
+  tmux \
+  git \
+  git-flow
 
 sudo pip3 install \
   ipython \
