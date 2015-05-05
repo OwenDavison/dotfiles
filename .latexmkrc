@@ -1,3 +1,4 @@
+# Found at: http://dlpeterson.com/2013/08/latex-workflow/
 # Choose xelatex as the default builder of pdfs, don't stop for errors, use synctex
 $pdflatex = 'xelatex -interaction=nonstopmode -synctex=1 --shell-escape %O %S';
 # .bbl files assumed to be regeneratable, safe as long as the .bib file is available
