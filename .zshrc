@@ -124,3 +124,5 @@ export TERM=screen-256color
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias tmux="tmux -2" #force 256 color mode
+
+/usr/bin/setxkbmap -option "ctrl:nocaps"
